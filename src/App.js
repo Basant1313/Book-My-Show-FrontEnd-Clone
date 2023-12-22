@@ -9,11 +9,15 @@ import DefaultHOC from "./HOC/Default.HOC";
 import Temp from "./components/temp";
 import DefaultLayout from "./layouts/Default.layout";
 import Navbar from "./components/Navbar/navbar.component";
+import HeroCarousal from "./components/HeroCarousal/HeroCarousal.component";
 function App() {
   return (
     //empty tag - when we don't want use any tags but still there is a requirement you can't return anything directly without using any tag if you have to return anything you have put inside the Tag so These empty Tag are called FRAGMENTS.     
+    
     <>
-    <DefaultHOC path = "/"  element={<Navbar/>} />
+    <DefaultHOC path = "/"  element={<><Navbar /><HeroCarousal /></>} />
+    
+    
       
     </>
   );

@@ -1,6 +1,4 @@
 import React from "react";
-import { IoChevronForward } from "react-icons/io5";
-import { HiChevronRight } from "react-icons/hi";
 import {
   BiSolidChevronRight,
   BiSearch,
@@ -10,7 +8,7 @@ import {
 import { Input } from "postcss";
 import loogo from "./bookmyshow-logo-vector.svg"
 
-// (>) - this symbol is known as chevron
+
 //sm -> small screen;
 //md -> medium device
 //lg -> large screen
