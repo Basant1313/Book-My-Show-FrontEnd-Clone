@@ -5,17 +5,30 @@ import { Routes,Route } from "react-router-dom";
 // HOC
 import DefaultHOC from "./HOC/Default.HOC";
 
+//Pages 
+import Homepage from "./pages/Home.page";
+
 // Component
-import Temp from "./components/temp";
-import DefaultLayout from "./layouts/Default.layout";
+
+// import DefaultLayout from "./layouts/Default.layout";
 import Navbar from "./components/Navbar/navbar.component";
 import HeroCarousal from "./components/HeroCarousal/HeroCarousal.component";
+
+
+
+//import here because App.js is the global file whatever is required here or render here is rendered in all the pages so that we don't need import in each particular functional component
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
+
+
 function App() {
   return (
     //empty tag - when we don't want use any tags but still there is a requirement you can't return anything directly without using any tag if you have to return anything you have put inside the Tag so These empty Tag are called FRAGMENTS.     
     
     <>
-    <DefaultHOC path = "/"  element={<><Navbar /><HeroCarousal /></>} />
+    <DefaultHOC path = "/" element={<><Navbar /><HeroCarousal /><Homepage /></>} />
     
     
       

@@ -5,6 +5,8 @@ import HeroSlider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// Component
+import { PrevArrow , NextArrow } from "./Arrows.component";
 //follow the dcumentation of slick
 const HeroCarousal = () => {
 
@@ -13,12 +15,16 @@ const HeroCarousal = () => {
     // centerMode and centerPadding are added here to to make carousel so that  1 image at center and 1 image from both side will 300px of with on screen.
     const settingsLg = {
         arrows: true,
+        dots: true,
         autoplay: true,
         centerMode:true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        centerPadding : "300px",
-        infinite : true
+        centerPadding : "200px",
+        infinite : true,
+        prevArrow: <PrevArrow />,
+        nextArrow: <NextArrow />
+
 
     }
 
@@ -30,7 +36,9 @@ const HeroCarousal = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        prevArrow: <PrevArrow />,
+        nextArrow: <NextArrow />
 };
 
 
@@ -38,11 +46,11 @@ const HeroCarousal = () => {
     const images = [
 
     
-     "https://images.unsplash.com/photo-1585951237313-1979e4df7385?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-     "https://images.unsplash.com/photo-1478700485868-972b69dc3fc4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-     "https://images.unsplash.com/photo-1614839380062-9378f1f170a8?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-     "https://images.unsplash.com/photo-1534188278934-76700c2da08b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-     "https://images.unsplash.com/photo-1445251836269-d158eaa028a6?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+     "https://assets-in.bmscdn.com/promotions/cms/creatives/1702972923076_nowweb.jpg",
+     "https://assets-in.bmscdn.com/promotions/cms/creatives/1703158443878_timmyweb.jpg",
+     "https://assets-in.bmscdn.com/promotions/cms/creatives/1703162228341_web.jpg",
+     "https://assets-in.bmscdn.com/promotions/cms/creatives/1701330082291_raeethdesktop.jpg",
+     "https://assets-in.bmscdn.com/promotions/cms/creatives/1703159413936_varungroverdesktop.jpg"
     ]
 
 return (
@@ -54,7 +62,7 @@ return (
             // The entire array (const images) does not that element inside it are image addresses it s just treat them as array elements so we refering each element as image and basically we will be rendering each images inside our source
             images.map((image) => (
                 <div className="w-full h-64 md:h-80 py-3 ">
-                    <img src = {image} alt="testing" className="w-full h-full rounded-md" />
+                    <img src = {image} alt="testing" className="w-full h-full rounded-lg" />
 
                 </div>
             ))
@@ -71,7 +79,7 @@ return (
         {
             // The entire array (const images) does not that element inside it are image addresses it s just treat them as array elements so we refering each element as image and basically we will be rendering each images inside our source
             images.map((image) => (
-                <div className="w-full h-96 px-2 py-3 ">
+                <div className="w-full h-80 px-2 py-3 ">
                     <img src = {image} alt="testing" className="w-full h-full rounded-md" />
 
                 </div>

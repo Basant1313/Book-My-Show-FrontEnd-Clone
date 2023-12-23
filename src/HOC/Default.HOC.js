@@ -23,19 +23,22 @@ const DefaultHOC = ({component: Component, ...rest }) => {
     return (
         <>
         <Routes>
+            
 
             <Route 
             {...rest}
             component = {(props) =>(               
-                 <DefaultLayout>
+                <DefaultLayout>
                     <Component {...props}/>
                 </DefaultLayout>
             )
         }
         />
-        </Routes>
         
+        </Routes>
         </>
+        
+    
     );
 };
 // we are destrucing {...props} in the route tag so that we can't miss out any properties. it is not neccessary but there is no harm in putting it

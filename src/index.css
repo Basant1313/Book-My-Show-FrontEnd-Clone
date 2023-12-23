@@ -8,8 +8,9 @@
 /* slick-preva and slick-next are the predefined classes of slick carosel npm package */
 
 .slick-prev {
-    left: 3% !important; /* it will occupy 3% of margin from the left before z-index was 0 */
+    left: 1% !important; /* it will occupy 3% of margin from the left before z-index was 0 */
     z-index: 1; /* you want to show  particular arrow above everything */
+  
 }
 .slick-next {
     right: 3% !important; /* it will occupy 3% of margin from the right before z-index was 0 */
