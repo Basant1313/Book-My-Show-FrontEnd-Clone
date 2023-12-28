@@ -4,9 +4,11 @@ import { Routes,Route } from "react-router-dom";
 
 // HOC
 import DefaultHOC from "./HOC/Default.HOC";
+import MovieHOC from "./HOC/Movie.HOC";
 
 //Pages 
 import Homepage from "./pages/Home.page";
+import Movie from "./pages/Movie.page";
 
 // Component
 
@@ -19,6 +21,7 @@ import HeroCarousal from "./components/HeroCarousal/HeroCarousal.component";
 //import here because App.js is the global file whatever is required here or render here is rendered in all the pages so that we don't need import in each particular functional component
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import MovieNavbar from "./components/Navbar/movieNavbar.component";
 
 
 
@@ -30,6 +33,7 @@ function App() {
     <>
     <DefaultHOC path = "/" element={<><Navbar /><HeroCarousal /><Homepage /></>} />
     
+    <MovieHOC path = "/movie/:id" element = {<> <MovieNavbar /> <Movie /> </>} />
     
       
     </>

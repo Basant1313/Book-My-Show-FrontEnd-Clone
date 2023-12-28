@@ -12,10 +12,10 @@ const Poster =  (props) => {
             <div className="h-80">
                 <img src={props.src} alt="Title Poster " className="w-full h-full rounded-xl" />
             </div>
-            <h3 className={`text-lg font-bold ${props.isDark ? "text-white" : "text-gray-700"}`}>
+            <h3 className={`text-lg font-bold ${props.isDark ? "text-white": "text-gray-700"}`}>
             {props.title}
             </h3>
-            <p className={`text-sm font-bold ${props.isDark ? "text-white" : "text-gray-700 "}`}>{props.subtitle}</p>
+            <p className={`text-sm ${props.isDark ? "text-white":"text-gray-500"}`}>{props.subtitle}</p>
         </div>
         
         </>

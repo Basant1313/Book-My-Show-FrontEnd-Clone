@@ -6,7 +6,7 @@ import Slider from "react-slick";
 const EntertainmentCard = (props) => {
     return (
         <>
-        <div className="w-full h-30 px-2">
+        <div className="w-full h-30 px-2 pt-2">
             <img className="w-full h-full rounded-xl" src={props.src} alt="Entertainment Image"  />
         </div>
         </>
@@ -35,8 +35,8 @@ const EntertaimentCardSlider = () => {
     const settings = {
         infinite: true,
         autoplay: false,
-        slidesToShow: 4,
-        slideToScroll: 4,
+        slidesToShow: 5,
+        slideToScroll: 5,
         IntialSlide: 0
     }
 
