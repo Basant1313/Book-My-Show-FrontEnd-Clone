@@ -9,6 +9,7 @@ import MovieHOC from "./HOC/Movie.HOC";
 //Pages 
 import Homepage from "./pages/Home.page";
 import Movie from "./pages/Movie.page";
+import Plays from "./pages/Plays.page";
 
 // Component
 
@@ -25,7 +26,6 @@ import MovieNavbar from "./components/Navbar/movieNavbar.component";
 
 
 
-
 function App() {
   return (
     //empty tag - when we don't want use any tags but still there is a requirement you can't return anything directly without using any tag if you have to return anything you have put inside the Tag so These empty Tag are called FRAGMENTS.     
@@ -34,6 +34,7 @@ function App() {
     <DefaultHOC path = "/" element={<><Navbar /><HeroCarousal /><Homepage /></>} />
     
     <MovieHOC path = "/movie/:id" element = {<> <MovieNavbar /> <Movie /> </>} />
+    <DefaultHOC path = "/plays" element={<><Navbar /><Plays /></>} />
     
       
     </>
