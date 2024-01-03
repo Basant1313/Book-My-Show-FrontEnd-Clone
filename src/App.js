@@ -31,6 +31,7 @@ function App() {
     //empty tag - when we don't want use any tags but still there is a requirement you can't return anything directly without using any tag if you have to return anything you have put inside the Tag so These empty Tag are called FRAGMENTS.     
     
     <>
+   
     <DefaultHOC path = "/" element={<><Navbar /><HeroCarousal /><Homepage /></>} />
     
     <MovieHOC path = "/movie/:id" element = {<> <MovieNavbar /> <Movie /> </>} />

@@ -30,9 +30,45 @@ const MovieHero = () => {
                        { backgroundImage: "linear-gradient(90deg, rgb(26, 26, 26) 24.97%, rgb(26, 26, 26) 38.3%, rgba(26, 26, 26, 0.04) 97.47%, rgb(26, 26, 26) 100%)"}}
                     
                 />
-                <div className="absolute z-30 w-64 h-94 left-28 top-11">
+                
+                <div className="absolute z-30 flex gap-8 left-28 top-11">
+
+                <div className="z-30 w-64 h-94">
                     <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/salaar-cease-fire--part-1-et00301886-1702971289.jpg" alt="Poster" className="h-full w-full rounded-xl" />
                 </div>
+               
+                <div className=" z-30 flex flex-col gap-3">
+
+                <div className=" py-5 "> 
+                    <h1 className="text-4xl text-white font-bold">Salaar: Cease Fire - Part 1</h1>
+                </div>
+
+                <div className="flex justify-between w-full h-20 bg-gray-700 items-center rounded-md">
+                    <div className="text-white px-5">
+
+                    <h3 className="text-md font-bold">Add your rating & review</h3>
+                    <p className="text-gray-400">Your rating matter</p>
+                    </div>
+                    <div className="w-32 h-12 text-black bg-white font-bold rounded-md mx-5">
+                        <button className="w-full h-full">Rate Now</button>
+                    </div>
+                </div>
+                    <div className="flex gap-1 ">
+                        <div className="w-28 h-8 text-black bg-gray-300 rounded-sm pl-3 ">
+                            <h4 className="w-full h-full">2D, IMAX 2D</h4>
+                        </div>
+                        <div className="w-80 h-8 text-black bg-gray-300 rounded-sm pl-3">
+                            <h4 className="w-full h-full">Telugu, Hindi, Malayalam, Kannada, Tamil </h4>
+                        </div>
+                    </div>
+
+                <div className="w-40 h-12 bg-pink-500 rounded-md text-white font-bold">
+                    <button className="w-full h-full">Book tickets</button>
+                </div>
+
+                </div>
+                </div>
+                
             <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/salaar-cease-fire--part-1-et00301886-1702971289.jpg" alt="" className="w-full h-full " />
             </div>
         </>

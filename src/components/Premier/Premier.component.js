@@ -9,7 +9,7 @@ import Poster from "../Poster/poster.component";
 import settings from "../../config/PosterCarousel.config";
 
 //images
-import PremierImages from "../../config/TempPosters.config";
+import PremierImages from "../../config/TempPostersPremier.config";
 
 export const Premier = () => {
 

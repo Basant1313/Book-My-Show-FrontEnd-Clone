@@ -18,7 +18,7 @@ const PremierImages = [
         src: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00353565-zqzlyflvfj-portrait.jpg ",
         alt:  "Yaaran Diyan Poun Baaran" ,
         title:"Yaaran Diyan Poun Baaran" ,
-        subtitl:"Punjabi" ,
+        subtitle:"Punjabi" ,
     },
     {
         src: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_exclusive_v1.png,t-false,lfo-bottom_left,l-end/et00380703-gkksjezxbd-portrait.jpg",

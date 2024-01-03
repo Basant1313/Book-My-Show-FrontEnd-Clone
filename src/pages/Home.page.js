@@ -2,7 +2,10 @@ import React from "react";
 import EntertaimentCardSlider from "../components/Entertainment/Entertainmentcard.component";
 import { Premier } from "../components/Premier/Premier.component";
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
-import TempPosters from "../config/TempPosters.config"
+import TempPostersPremier from "../config/TempPostersPremier.config"
+import YTMusicSTudioImagesImages from "../config/TempPostersYTMusicSTudio.config";
+import OutdoorEventsImages from "../config/TempPostersOutdoorEvents.config";
+import LaughterTherapyImages from "../config/TempPostersLaughter.config";
 
 
 const Homepage = () => {
@@ -23,18 +26,18 @@ const Homepage = () => {
             <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-banner-web-collection-202208191200.png"
             alt="Premiere" className="w-full h-full"/>
             </div>
-             <PosterSlider images={TempPosters} title = "Premiere" subtitle = "Brand new release everyfriday " isDark />
+             <PosterSlider images={TempPostersPremier} title = "Premiere" subtitle = "Brand new release everyfriday " isDark />
             </div>
         </div>
         </div>
         <div className="container mx-auto px-4">
-            <PosterSlider images={TempPosters} title= "Your Music Studio" isDark={false} />
+            <PosterSlider images={YTMusicSTudioImagesImages} title= "Your Music Studio" isDark={false} />
         </div>
         <div className="container mx-auto px-4">
-            <PosterSlider images={TempPosters} title= "Outdoor Events" isDark={false} />
+            <PosterSlider images={OutdoorEventsImages} title= "Outdoor Events" isDark={false} />
         </div>
         <div className="container mx-auto px-4">
-            <PosterSlider images={TempPosters} title= "Laughter Theraphy" isDark={false} />
+            <PosterSlider images={LaughterTherapyImages} title= "Laughter Theraphy" isDark={false} />
         </div>
         </>
     );
