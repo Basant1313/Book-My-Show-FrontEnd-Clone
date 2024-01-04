@@ -2,6 +2,11 @@
 // But in App.js we will requiring Route as a Tag because here we will do some routing work
 import { Routes,Route } from "react-router-dom";
 
+// axios
+
+// we have alot of component or pages we dont't have go to all the pages fetch the data  again and again locally for each component or pages we just do it globally in app.js file(as it is a god file). That is importance of axios(just do it once and you are done with everything)
+import axios from "axios";
+
 // HOC
 import DefaultHOC from "./HOC/Default.HOC";
 import MovieHOC from "./HOC/Movie.HOC";
@@ -25,17 +30,30 @@ import "slick-carousel/slick/slick-theme.css";
 import MovieNavbar from "./components/Navbar/movieNavbar.component";
 
 
+// axios default setting - baseURL and api_key will remain constant
+axios.defaults.baseURL = "https://api.themoviedb.org/3";
+axios.defaults.params = {}; // this we have written to avoid erros as we don't have any parameter and we are taking parameter from TMDB api;
+
+// entire error will go reason of writting this is because we are setting up the default parameters for the api which we are trying to fetch and the default parameter here is << api_key >> so we are it to assign certain values which present in my React application but there is one more thing my default parameter is empty so but whatever is present inside the api (entire URL) whatever given by TMDB so inside it we have parameter api_key and we are assigning certain key to that parameter.
+
+// default parameters
+// below params is taken from TMDB api that partcular params has a keyword called api_key and we have assign that particular paramter the environments variable values.
+axios.defaults.params["api_key"] = process.env.REACT_APP_API_KEY;
 
 function App() {
   return (
     //empty tag - when we don't want use any tags but still there is a requirement you can't return anything directly without using any tag if you have to return anything you have put inside the Tag so These empty Tag are called FRAGMENTS.     
     
     <>
-   
+   <div className="bg-gray-200">
+
+
     <DefaultHOC path = "/" element={<><Navbar /><HeroCarousal /><Homepage /></>} />
     
     <MovieHOC path = "/movie/:id" element = {<> <MovieNavbar /> <Movie /> </>} />
     <DefaultHOC path = "/plays" element={<><Navbar /><Plays /></>} />
+   
+   </div>
     
       
     </>

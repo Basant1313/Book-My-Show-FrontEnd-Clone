@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useState, useEffect}from "react";
 import HeroSlider from "react-slick";
+
+import axios from "axios";
 
 // Import css files
 import "slick-carousel/slick/slick.css";
@@ -9,6 +11,35 @@ import "slick-carousel/slick/slick-theme.css";
 import { PrevArrow , NextArrow } from "./Arrows.component";
 //follow the dcumentation of slick
 const HeroCarousal = () => {
+
+    const [images , setImages] = useState([]);
+
+    // [] (to avoid infite rendering)-> Tne lifecyle method are  called more than once so we were using it so that they just called upon once.
+
+
+    // useEffect(async() => {
+    //     const getImages = await axios.get("/movie/now_playing");
+    //     console.log(getImages);
+    // }, []);
+    
+
+    // Reason of doing below is because when we rendered everything before we use the async function.
+    
+    // fallback of async function is when async funtion is not yeilding any data or the data is not getting fetched then basically the async function is awaited and promises is made will get back to you whenever the data is fetched .
+
+    // we are avoiding that we are creating our own function and let us suppose whenever the data is fetched then only we will the function. unneccesssaaryly we will not make a promise and entire async task wait till the entire data is fetched.  
+
+    
+    // better method - very helpful in production level projects.
+    useEffect(() => {
+        const requestNowPlayingMovies = async () => {
+            const getImages = await axios.get("/movie/now_playing");
+            console.log(getImages);
+        };
+        requestNowPlayingMovies();
+    }, []); 
+
+    
 
     // Courosel Setting for Large Screen
 
@@ -41,17 +72,6 @@ const HeroCarousal = () => {
         nextArrow: <NextArrow />
 };
 
-
-
-    const images = [
-
-    
-     "https://assets-in.bmscdn.com/promotions/cms/creatives/1702972923076_nowweb.jpg",
-     "https://assets-in.bmscdn.com/promotions/cms/creatives/1703158443878_timmyweb.jpg",
-     "https://assets-in.bmscdn.com/promotions/cms/creatives/1703162228341_web.jpg",
-     "https://assets-in.bmscdn.com/promotions/cms/creatives/1701330082291_raeethdesktop.jpg",
-     "https://assets-in.bmscdn.com/promotions/cms/creatives/1703159413936_varungroverdesktop.jpg"
-    ]
 
 return (
     //Putting our logic inside <HeroSlider> tag

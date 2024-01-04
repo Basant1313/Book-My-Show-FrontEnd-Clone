@@ -8,13 +8,13 @@ const PlaysFilter = (props) => {
     <Disclosure >
         {({ open }) => (
             <>
-            <Disclosure.Button className="py-2 flex items-center gap-3 bg-gray-300 w-64 rounded-md my-3 px-2">
+            <Disclosure.Button className="py-2 flex items-center gap-3 bg-white w-64 rounded-md my-3 px-2">
               {open ? <BiChevronUp /> : <BiChevronDown />}  
             <span className={ open ? "text-red-600" : "text-gray-700"}>
             {props.title}
             </span>
       </Disclosure.Button>
-      <Disclosure.Panel className="text-gray-500 bg-gray-300 w-64 items-center">
+      <Disclosure.Panel className="text-gray-500 bg-white w-64 items-center">
         <div className='flex items-center gap-3 flex-wrap'>
             {props.tags.map((tag) => (
                 <>
