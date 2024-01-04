@@ -5,20 +5,20 @@ const PlaysFilter = (props) => {
 
     // instead of using both <BiChevronUp /> or <BiChevronDown /> we can use one of them and apply css rotate-90 transform it.
   return (
-    <Disclosure>
+    <Disclosure >
         {({ open }) => (
             <>
-            <Disclosure.Button className="py-2 flex items-center gap-3">
+            <Disclosure.Button className="py-2 flex items-center gap-3 bg-gray-300 w-64 rounded-md my-3 px-2">
               {open ? <BiChevronUp /> : <BiChevronDown />}  
-            <span className={open ? "text-red-600" : "text-gray-700"}>
+            <span className={ open ? "text-red-600" : "text-gray-700"}>
             {props.title}
             </span>
       </Disclosure.Button>
-      <Disclosure.Panel className="text-gray-500">
+      <Disclosure.Panel className="text-gray-500 bg-gray-300 w-64 items-center">
         <div className='flex items-center gap-3 flex-wrap'>
             {props.tags.map((tag) => (
                 <>
-                <div className='border-2 border-gray-200 p-2'>
+                <div className='border-2 border-gray-200 p-2 '>
                     <span className='text-red-600'>{tag}</span>
                 </div>
                 </>

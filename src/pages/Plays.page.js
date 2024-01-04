@@ -108,7 +108,7 @@ const Plays = () => {
           <div className=" lg:w-1/4 ">
           <h2 className="text-2xl font-bold my-4">Filters </h2>
         <div>
-            <PlaysFilter title="Date" tags={["Today","Tommorow","This Weekend"]}/>
+            <PlaysFilter title="Date" tags={["Today","Tommorow","This Weekend"]} />
             <PlaysFilter title="Languages" tags={["Hindi","Marathi","English","Gujarati","Urdu"]}/>
             <PlaysFilter title="Categories" tags={["Theatre","Storytelling"]}/>
             <PlaysFilter title="Genres" tags={["Drama","Comedy","Historical","Romantic","Adult","Adventure","Biography"]}/>

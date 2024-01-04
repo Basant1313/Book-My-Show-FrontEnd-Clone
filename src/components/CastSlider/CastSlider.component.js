@@ -10,7 +10,8 @@ import settings from "../../config/PosterCarousel.config";
 import Slider from "react-slick";
 import Cast from "../Cast/Cast.components";
 
-const PosterSlider = (props)  => {
+
+const CastSlider = (props)  => {
     return (
         <>
          <div className="flex flex-col items-start py-4 ">
@@ -22,7 +23,7 @@ const PosterSlider = (props)  => {
             
             {
                 props.images.map((image) =>(
-                    <Poster {...image} /*TempPoster.config rendered here*/ isDark = {props.isDark}/>
+                    <Cast {...image} /*TempCast.config rendered here*/ isDark = {props.isDark}/>
                     ))
                 }
           
@@ -31,4 +32,4 @@ const PosterSlider = (props)  => {
     )
 }
 
-export default PosterSlider;
+export default CastSlider;

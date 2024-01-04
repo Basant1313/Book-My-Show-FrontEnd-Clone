@@ -1,4 +1,5 @@
 import React from "react";
+import star from "../MovieHero/star.svg";
 
 const MovieHero = () => {
     
@@ -43,7 +44,18 @@ const MovieHero = () => {
                     <h1 className="text-4xl text-white font-bold">Salaar: Cease Fire - Part 1</h1>
                 </div>
 
-                <div className="flex justify-between w-full h-20 bg-gray-700 items-center rounded-md">
+                <div className="z-30 flex gap-2">
+                    <div className="w-6">
+                    <img src={star} alt="star" className="w-full"/>
+                    </div>
+                  
+                  <div className="flex gap-2">
+                    <h2 className=" text-xl text-white font-bold">8.4/10</h2>
+                    <p className="text-gray-300 text-sm py-1">550.2k Votes</p>
+                  </div>
+                </div>
+
+                <div className="flex justify-between w-full h-20 bg-[#404040] items-center rounded-md">
                     <div className="text-white px-5">
 
                     <h3 className="text-md font-bold">Add your rating & review</h3>
@@ -62,7 +74,20 @@ const MovieHero = () => {
                         </div>
                     </div>
 
-                <div className="w-40 h-12 bg-pink-500 rounded-md text-white font-bold">
+                    <div className="z-30 text-white flex gap-3">
+                        
+                        <p>2h 55m</p>
+                        <span> • </span>
+                        <a href="">Action,</a>
+                        <span>,</span>
+                        <a href="">Thriller</a>
+                        <span> • </span>
+                        <p>A</p>
+                        <span> • </span>
+                        <p>22 Dec, 2023</p>
+                    </div>
+
+                <div className="w-48 h-12 bg-[#f62252] rounded-md text-white font-bold ">
                     <button className="w-full h-full">Book tickets</button>
                 </div>
 
