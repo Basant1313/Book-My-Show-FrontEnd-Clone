@@ -13,4 +13,4 @@ const MovieLayout = (props) => {
     );
 };
 
-export default MovieLayout;
+export default MovieLayout; 

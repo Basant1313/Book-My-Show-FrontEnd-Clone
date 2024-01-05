@@ -3,7 +3,7 @@
 
 import React from "react";
 
-import Poster from "../Poster/poster.component";
+
 
 import settings from "../../config/PosterCarousel.config";
 

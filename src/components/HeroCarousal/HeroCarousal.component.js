@@ -12,7 +12,7 @@ import { PrevArrow , NextArrow } from "./Arrows.component";
 //follow the dcumentation of slick
 const HeroCarousal = () => {
 
-    const [images , setImages] = useState([]);
+    
 
     // [] (to avoid infite rendering)-> Tne lifecyle method are  called more than once so we were using it so that they just called upon once.
 
@@ -31,10 +31,16 @@ const HeroCarousal = () => {
 
     
     // better method - very helpful in production level projects.
+    const [images , setImages] = useState([]);
+
+    // we got the images from the "/movie/now_playing" this particular api endpoint and then we are seting(set) the images by whatever images we got that wil access the result part for those images and we will set that things to [images] after seting the images we are mapping the images and each image here is called image. we can see where the entire JPG path is present (object -> data -> results).Inside result which has been set to images so images are basically now incharge of individual image . So how to acess that .JPG thing it is present in backdrop_path . backdrop_path is responsible for unique path of the images.
+
+
+
     useEffect(() => {
         const requestNowPlayingMovies = async () => {
             const getImages = await axios.get("/movie/now_playing");
-            console.log(getImages);
+            setImages(getImages.data.results);
         };
         requestNowPlayingMovies();
     }, []); 
@@ -79,10 +85,11 @@ return (
     <div className="lg:hidden">
     <HeroSlider {...settings}>
         {
-            // The entire array (const images) does not that element inside it are image addresses it s just treat them as array elements so we refering each element as image and basically we will be rendering each images inside our source
+         
+         // dynamically rendering the image using  -> ${} and before it is our baseURL
             images.map((image) => (
                 <div className="w-full h-64 md:h-80 py-3 ">
-                    <img src = {image} alt="testing" className="w-full h-full rounded-lg" />
+                    <img src = {`https://image.tmdb.org/t/p/original${image.backdrop_path}`} alt="testing" className="w-full h-full rounded-lg" />
 
                 </div>
             ))
@@ -97,10 +104,10 @@ return (
     <div className="hidden lg:block">
     <HeroSlider {...settingsLg}>
         {
-            // The entire array (const images) does not that element inside it are image addresses it s just treat them as array elements so we refering each element as image and basically we will be rendering each images inside our source
+            
             images.map((image) => (
                 <div className="w-full h-80 px-2 py-3 ">
-                    <img src = {image} alt="testing" className="w-full h-full rounded-md" />
+                    <img src = {`https://image.tmdb.org/t/p/original${image.backdrop_path}`} alt="testing" className="w-full h-full rounded-md" />
 
                 </div>
             ))
