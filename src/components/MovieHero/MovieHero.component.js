@@ -1,6 +1,29 @@
 import React from "react";
 import star from "../MovieHero/star.svg";
 
+const launchRazorPay = () => {
+    let options = {
+        key: "rzp_test_qHT01gLYYByqfa",
+        amount: 500*100, // amount is in currency. Hence 29935 refers to 29935 paise or ₹299.35 so to make 500 in our case we need to multipy by 100.
+        currency: "INR",
+        name: "Book My Show Clone",
+        description: "Movie Purchase on Rental",
+        image: "https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticker-png.png",
+        handler: () => {
+          alert("Payment Done")
+        },
+        theme: {
+          color:"#c4242d"
+        } // This will trigger when payment is successfull we are not doing any backend successfull payment just on the frontend that will be a user interface which will come. When success will come this handler function will br triggered. Inside handler function we can make another functional component or REDIRECT this page to other success page. 
+    };
+  
+    let rzp = new window.Razorpay(options);
+    rzp.open();
+    
+    // From the entire window we are accessing the Razorpay Method because we have imported the script and the RazorPay method is now the part of your entire window. Window is like Parent
+  }
+  
+
 const MovieHero = () => {
     
 
@@ -88,7 +111,7 @@ const MovieHero = () => {
                     </div>
 
                 <div className="w-48 h-12 bg-[#f62252] rounded-md text-white font-bold ">
-                    <button className="w-full h-full">Book tickets</button>
+                    <button onClick={launchRazorPay} className="w-full h-full">Book tickets</button>
                 </div>
 
                 </div>
