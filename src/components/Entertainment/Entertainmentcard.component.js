@@ -7,7 +7,7 @@ const EntertainmentCard = (props) => {
     return (
         <>
         <div className="w-full h-30 px-2 pt-2">
-            <img className="w-full h-full rounded-xl" src={props.src} alt="Entertainment Image"  />
+            <img className="w-full h-full rounded-xl" src={props.src} alt="Entertainment Images"  />
         </div>
         </>
 
@@ -48,8 +48,8 @@ const EntertaimentCardSlider = () => {
         <>
         <Slider {...settings}>
 
-            {EntertainmentImage.map((image) => (
-                <EntertainmentCard src={image} />
+            {EntertainmentImage.map((images) => (
+                <EntertainmentCard src={images} />
           
 
                 ))}
