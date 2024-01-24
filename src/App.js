@@ -1,6 +1,5 @@
 // in index.js we required BrowserRouter Tag 
 // But in App.js we will requiring Route as a Tag because here we will do some routing work
-import { Routes,Route } from "react-router-dom";
 
 // axios
 
