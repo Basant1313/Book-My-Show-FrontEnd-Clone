@@ -1,32 +1,11 @@
 import React from "react";
 import MovieHero from "../components/MovieHero/MovieHero.component";
-import { Container } from "postcss";
+// import { Container } from "postcss";
 import {BiCameraMovie} from "react-icons/bi";
 import CastImages from "../config/TempPostersCast.config.js";
 import CastSlider from "../components/CastSlider/CastSlider.component.js";
 import CrewImages from "../config/TempPosterCrew.config.js";
 
-const launchRazorPay = () => {
-  let options = {
-      key: "rzp_test_qHT01gLYYByqfa",
-      amount: 500,
-      currency: "INR",
-      name: "Book My Show Clone",
-      description: "Movie Purchase on Rental",
-      image: "https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticker-png.png",
-      handler: () => {
-        alert("Payment Done")
-      },
-      theme: {
-        color:"#c4242d"
-      } // This will trigger when payment is successfull we are not doing any backend successfull payment just on the frontend that will be a user interface which will come. When success will come this handler function will br triggered. Inside handler function we can make another functional component or REDIRECT this page to other success page. 
-  };
-
-  let rzp = new window.Razorpay(options);
-  rzp.open();
-  
-  // From the entire window we are accessing the Razorpay Method because we have imported the script and the RazorPay method is now the part of your entire window. Window is like Parent
-}
 
 const Movie = () => {
 

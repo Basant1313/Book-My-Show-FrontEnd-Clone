@@ -1,12 +1,12 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import EntertaimentCardSlider from "../components/Entertainment/Entertainmentcard.component";
-import { Premier } from "../components/Premier/Premier.component";
+// import { Premier } from "../components/Premier/Premier.component";
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
-import TempPostersPremier from "../config/TempPostersPremier.config";
-import YTMusicSTudioImagesImages from "../config/TempPostersYTMusicSTudio.config";
-import OutdoorEventsImages from "../config/TempPostersOutdoorEvents.config";
-import LaughterTherapyImages from "../config/TempPostersLaughter.config";
+// import TempPostersPremier from "../config/TempPostersPremier.config";
+// import YTMusicSTudioImagesImages from "../config/TempPostersYTMusicSTudio.config";
+// import OutdoorEventsImages from "../config/TempPostersOutdoorEvents.config";
+// import LaughterTherapyImages from "../config/TempPostersLaughter.config";
 
 const Homepage = () => {
   const [popularMovies, setpopularMovies] = useState([]);
@@ -25,13 +25,13 @@ const Homepage = () => {
 
   useEffect(() => {
     const requesttvLatestSeries = async () => {
-      const gettvLatestSeries = await axios.get("/tv/popular");
+      const gettvLatestSeries = await axios.get("/tv/airing_today");
       settvLatestSeries(gettvLatestSeries.data.results);
     };
     requesttvLatestSeries();
   }, []);
 
-//   console.log(tvPopular);
+  console.log(tvLatestSeries);
 
   
   const [topRatedTVSeries, settopRatedTVSeries] = useState([]);
@@ -109,6 +109,7 @@ const Homepage = () => {
               images={tvLatestSeries}
               title="Premiere"
               subtitle="Brand new release everyfriday "
+             
               isDark
             />
           </div>

@@ -8,7 +8,7 @@ import React from "react";
 import settings from "../../config/PosterCarousel.config";
 
 import Slider from "react-slick";
-import Cast from "../Cast/Cast.components";
+import Cast from "../Cast/Cast.component";
 
 
 const CastSlider = (props)  => {
